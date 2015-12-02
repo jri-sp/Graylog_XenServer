@@ -43,7 +43,7 @@ try:
                 data['_'+device+'_ip_gateway]'] = pif_record["gateway"]
                 data['_'+device+'_ip_netmask'] = pif_record["netmask"]
                 data['_'+device+'_ip_mode'] = pif_record["ip_configuration_mode"]
-                data['_'+device+'_mac'] = pif_record["MAC"];
+                data['_'+device+'_mac'] = pif_record["MAC"]
 
         GELF().log_udp(data)
 
