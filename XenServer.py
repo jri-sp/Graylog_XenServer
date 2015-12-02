@@ -1,6 +1,8 @@
 import sys
 from Config import Config
 import XenAPI
+import parse_rrd
+import time
 
 class XenServer:
 
@@ -24,3 +26,15 @@ class XenServer:
         except Exception, e:
             raise
         return session
+
+    def get_rrd_data(self,hostname):
+        try:
+
+            rrd_url = "http://"+self.xs_username+":"+self.xs_password+"@"+hostname
+            rrd_parameters = {}
+            rrd_data = parse_rrd.RRDUpdates()
+            rrd_data.refresh(rrd_url,rrd_parameters)
+
+        except Exception, e:
+            raise
+        return rrd_data
