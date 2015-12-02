@@ -31,9 +31,9 @@ try:
                 '_vm_uuid': vm_record["uuid"],
                 '_VCPUs_at_startup': vm_record["VCPUs_at_startup"],
                 '_VCPUs_max': vm_record["VCPUs_max"],
-                '_memory_dynamic_max': vm_record["memory_dynamic_max"],
-                '_memory_dynamic_min': vm_record["memory_dynamic_min"],
-                '_memory_static_max': vm_record["memory_static_max"],
+                '_memory_dynamic_max': int(vm_record["memory_dynamic_max"]),
+                '_memory_dynamic_min': int(vm_record["memory_dynamic_min"]),
+                '_memory_static_max': int(vm_record["memory_static_max"]),
                 '_dom_arch': vm_record["domarch"],
                 '_tags': vm_record["tags"]
             }

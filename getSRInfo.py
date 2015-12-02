@@ -26,11 +26,11 @@ try:
             '_content_type': sr_record["content_type"],
             '_name_description': sr_record["name_description"],
             '_name_label': sr_record["name_label"],
-            '_physical_size': sr_record["physical_size"],
-            '_physical_utilisation': sr_record["physical_utilisation"],
+            '_physical_size': int(sr_record["physical_size"]),
+            '_physical_utilisation': int(sr_record["physical_utilisation"]),
             '_shared': str(sr_record["shared"]),
             '_sr_uuid': sr_record["uuid"],
-            '_virtual_allocation': sr_record["virtual_allocation"],
+            '_virtual_allocation': int(sr_record["virtual_allocation"]),
             '_local_cache_enabled': str(sr_record["local_cache_enabled"]),
             '_type': sr_record["type"]
 
