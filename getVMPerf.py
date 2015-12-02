@@ -34,7 +34,6 @@ try:
             if not xs_session.xenapi.VM.get_is_control_domain(vm):
                 for param in perf_data.get_vm_param_list(vm_uuid):
 
-                    #print param
                     if param != "":
                         for row in range(perf_data.get_nrows()):
                             param_data = perf_data.get_vm_data(vm_uuid,param,row)
