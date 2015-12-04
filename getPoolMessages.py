@@ -8,8 +8,6 @@ import traceback
 import xmlrpclib
 import time
 
-from pprint import pprint
-
 try:
     xs_session = XenServer().make_session()
     #last 24h messages
