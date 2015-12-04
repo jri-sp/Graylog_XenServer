@@ -65,10 +65,17 @@ Here is a proposal:
 # Get Hosts CPUs Every five minutes
 */5 * * * * /root/Graylog_XenServer/getHostCPUInfo.py
 # Get SR Info in the Pool every five minutes
-*/5 * * * * /root/Graylog_XenServer/getSRInfo.py`
+*/5 * * * * /root/Graylog_XenServer/getSRInfo.py
+# Get VM Performance Data every minute
+* * * * * /root/Graylog_XenServer/getVMPerf.py
+# Get Pool Performance Data every minute
+* * * * * /root/Graylog_XenServer/getPoolPerf.py
+# Get Pool last 24h messages every 5 minutes
+*/5 * * * * /root/Graylog_XenServer/getPoolPerf.py
 ```
 
 Make sure the scripts have executable permission set.
+
 ## Limitations
 
 * Doesn't support messages chunking. 
@@ -77,7 +84,6 @@ Make sure the scripts have executable permission set.
 
 ## To Do
 
-* parse_rrd.py utilization to get performance data
 * Add GELF TCP and HTTP
 * Add Dashboard json example
 * Make a complete content pack for Graylog
@@ -97,3 +103,5 @@ http://xenserver.org/partners/developing-products-for-xenserver/18-sdk-developme
 http://xenserver.org/partners/developing-products-for-xenserver/18-sdk-development/102-xs-deve-py-parse.html
 
 https://github.com/xapi-project/xen-api/blob/master/scripts/examples/python/XenAPI.py
+
+http://xenserver.org/partners/developing-products-for-xenserver/2-uncategorised/104-xs-dev-rrd-example-script.html
