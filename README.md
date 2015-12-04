@@ -71,7 +71,7 @@ Here is a proposal:
 # Get Pool Performance Data every minute
 * * * * * /root/Graylog_XenServer/getPoolPerf.py
 # Get Pool last 24h messages every 5 minutes
-*/5 * * * * /root/Graylog_XenServer/getPoolPerf.py
+*/5 * * * * /root/Graylog_XenServer/getPoolMessages.py
 ```
 
 Make sure the scripts have executable permission set.
