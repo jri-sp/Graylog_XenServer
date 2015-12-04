@@ -68,8 +68,8 @@ Here is a proposal:
 */5 * * * * /root/Graylog_XenServer/getSRInfo.py
 # Get VM Performance Data every minute
 * * * * * /root/Graylog_XenServer/getVMPerf.py
-# Get Pool Performance Data every minute
-* * * * * /root/Graylog_XenServer/getPoolPerf.py
+# Get Hosts Performance Data every minute
+* * * * * /root/Graylog_XenServer/getHostsPerf.py
 # Get Pool last 24h messages every 5 minutes
 */5 * * * * /root/Graylog_XenServer/getPoolMessages.py
 ```
