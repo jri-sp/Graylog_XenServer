@@ -15,7 +15,7 @@ try:
     hosts = xs_session.xenapi.host.get_all()
 
     for host in hosts:
-        hostname = xs_session.xenapi.host.get_hostname(host)
+        hostname = xs_session.xenapi.host.get_address(host)
         try:
             perf_data = XenServer().get_rrd_data(hostname)
             host_uuid = perf_data.get_host_uuid()
