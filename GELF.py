@@ -1,6 +1,9 @@
 import time
 from socket import *
-import simplejson
+try:
+    import simplejson
+except ImportError:
+    import json as simplejson
 import zlib
 from Config import Config
 
